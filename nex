@@ -1,0 +1,19 @@
+ <!-- Main Content -->
+    <div class="content">
+      <h1>Dashboard</h1>
+      <div class="stats">
+        <div class="card"><h2>Total Products</h2><span><?= $total ?></span></div>
+        <div class="card"><h2>Featured Products</h2><span><?= $featured ?></span></div>
+        <div class="card"><h2>Low Stock</h2><span><?= $lowstock ?></span></div>
+      </div>
+
+      <div class="activities">
+        <h3>Recent Activities</h3>
+        <?php foreach($activities as $a): ?>
+          <div class="activity">
+            <?= $a['msg'] ?>
+            <small><?= $a['time'] ?></small>
+          </div>
+        <?php endforeach; ?>
+      </div>
+  </div>
